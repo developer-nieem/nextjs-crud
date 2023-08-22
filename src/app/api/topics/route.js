@@ -18,8 +18,10 @@ export const GET = async() =>{
 
 
 export const DELETE = async(request) => {
-    const id = request.nextURL.searchParams.get('id');
+    const id = request.nextUrl.searchParams.get('id');
     await connectMongodb();
-    await Topic.findByIdAndDelete(id);
-    return NextResponse.json({message: "topic delete"}, {status:200})
+   await Topic.findByIdAndDelete(id);
+  return NextResponse.json({ message: "Topic deleted" }, { status: 200 });
 }
+
+

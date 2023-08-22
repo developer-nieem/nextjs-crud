@@ -1,6 +1,10 @@
 import React from 'react';
 
-const AddTopic = () => {
+
+
+const AddTopic = async() => {
+
+   
     return (
         <div>
             <form className='flex flex-col my-5 space-y-3'>

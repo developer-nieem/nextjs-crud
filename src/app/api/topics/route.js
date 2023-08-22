@@ -14,4 +14,12 @@ export const GET = async() =>{
     await connectMongodb();
     const topics = await Topic.find();
     return NextResponse.json({topics});
+};
+
+
+export const DELETE = async(request) => {
+    const id = request.nextURL.searchParams.get('id');
+    await connectMongodb();
+    await Topic.findByIdAndDelete(id);
+    return NextResponse.json({message: "topic delete"}, {status:200})
 }

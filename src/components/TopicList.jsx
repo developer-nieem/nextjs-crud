@@ -1,7 +1,7 @@
 import React from 'react';
 import RemovedTopic from './RemovedTopic';
 import Link from 'next/link';
-import { HiOutlineTrash } from 'react-icons/hi';
+import { HiOutlineTrash, HiPencilAlt } from 'react-icons/hi';
 
 const TopicList = () => {
     return (
@@ -11,8 +11,8 @@ const TopicList = () => {
                 <p>Topic description  </p>
             </div>
             <div className='flex items-start gap-4'>
+                <Link href='/editTopic/1254'> <HiPencilAlt></HiPencilAlt> </Link>
                 <RemovedTopic></RemovedTopic>
-                <Link href='/editTopic'> <HiOutlineTrash></HiOutlineTrash> </Link>
             </div>
         </div>
     );

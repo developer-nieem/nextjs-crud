@@ -1,9 +1,9 @@
 import React from 'react';
-import { HiPencilAlt } from "react-icons/hi";
+import { HiOutlineTrash, HiPencilAlt } from "react-icons/hi";
 const RemovedTopic = () => {
     return (
         <div>
-            <button> <HiPencilAlt></HiPencilAlt> </button>
+            <button> <HiOutlineTrash></HiOutlineTrash> </button>
         </div>
     );
 };

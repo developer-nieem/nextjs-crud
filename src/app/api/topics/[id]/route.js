@@ -13,9 +13,17 @@ export const PUT =  async(request, {params})=>{
 
 // single data by id 
 
-const GET = async(request, {params}) =>{
-    const {id} = params;
+ export async function GET(request, { params }) {
+    const { id } = params;
     await connectMongodb();
-    const topic =  await Topic.findOne({_id: id});
-    return NextResponse.json({topic}, {status:200})
-}
+    const topic = await Topic.findOne({ _id: id });
+    return NextResponse.json({ topic }, { status: 200 });
+  }
+
+
+//   const GET =  async(request, {params}) =>{
+//     const { id } = params;
+//     await connectMongodb();
+//     const topic = await Topic.findOne({ _id: id });
+//     return NextResponse.json({ topic }, { status: 200 });
+//   }

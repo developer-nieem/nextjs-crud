@@ -1,12 +1,6 @@
 {
   "extends": "next/core-web-vitals",
-  
-    "rules": {
-      "react/no-unescaped-entities": ["error", {
-        "forbid": [">", "}", "`"],
-        "allowTemplateLiterals": true
-      }]
-    }
-  
-  
+  "rules": {
+    "react/no-unescaped-entities": ["error", { "forbid": [">", "}", "`"], "allowTemplateLiterals": true }]
+  }
 }

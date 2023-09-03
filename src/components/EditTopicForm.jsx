@@ -11,7 +11,7 @@ const EditTopicForm = ({id, data }) => {
   const updateHandler = async(e) => {
     e.preventDefault();
 
-    const res =  await fetch(`http://localhost:3000/api/topics/${id}` , {
+    const res =  await fetch(`${process.env.NEXT_PUBLIC_API_URL}/api/topics/${id}` , {
         method:"PUT",
         headers:{
             "Content-type" : "application/json"

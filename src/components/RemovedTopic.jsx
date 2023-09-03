@@ -12,7 +12,7 @@ const RemovedTopic = ({id}) => {
         const confirms = confirm('are you sure for remove topic')
 
         if (confirms) {
-           const res = await fetch(`http://localhost:3000/api/topics/?id=${id}` , {
+           const res = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/api/topics/?id=${id}` , {
                 method:'DELETE'
             })
 

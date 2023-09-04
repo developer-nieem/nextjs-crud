@@ -24,13 +24,13 @@ const getTopics = async() =>{
 
 const TopicList = async() => {
 
-    const {topics} = await getTopics();
+        const {topics} = await getTopics();
 
 
     return (
         <>
         
-        {topics?.map(item => <div key={item._id}  className='p-2 border my-5 flex justify-between'>
+        {topics.map(item => <div key={item._id}  className='p-2 border my-5 flex justify-between'>
             
             
             <div>

@@ -1,22 +1,20 @@
 
-import EditTopicForm from '@/components/EditTopicForm';
+import EditTopics from '@/components/EditTopics/EditTopics';
 import React from 'react';
 
 
 
-const EditTopic = async({params}) => {
-const id =  params.id;
-const res = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/api/topics/${id}`)
-const data = await res.json();
+const Edit_Topic = ({params}) => {
 
+const id =  params.id
 
 
 
 return (
         <div>
-            <EditTopicForm id={id}  data={data}></EditTopicForm>
+            <EditTopics id={id}></EditTopics>
         </div>
     );
 };
 
-export default EditTopic;
+export default Edit_Topic;
